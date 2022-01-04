@@ -3,7 +3,7 @@ package com.example.serializableparcelable;
 import java.io.Serializable;
 
 /**
- * Serializabale接口是一个空接口
+ * Serializable接口是一个空接口
  * 具体的序列化与反序列化操作是由ObjectOutputStream和ObjectInputStream完成的
  * 内部采用java的反射机制，在运行时判断类的serialVersionUID来验证版本一致性的
  * 进行反序列化时，
