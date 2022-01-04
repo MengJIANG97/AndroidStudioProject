@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.activityapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ActivityApplication">
+
+        <!--
+        使用Android自带的Theme.Translucent
+        @android:style/Theme.Translucent
+        @android:style/Theme.Translucent.NoTitleBar
+        @android:style/Theme.Translucent.NoTitleBar.Fullscreen
+        不足点：
+          1.只能继承原生的Activity，才能使用Theme.Translucent，而不能继承AppCompatActivity
+          2.不能灵活定制style，如statusBar不能设置成透明
+        -->
+        <activity
+            android:name=".ThemeTranslucentActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--
+        使用自定义Theme
+        -->
+        <activity
+            android:name=".TranslucentActivity"
+            android:theme="@style/TranslucentStyle"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
